@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[82]:
+# In[1]:
 
 
 from bs4 import BeautifulSoup
@@ -11,7 +11,7 @@ warnings.filterwarnings("ignore")
 import datetime
 
 
-# In[83]:
+# In[4]:
 
 
 def link_to_ET():
@@ -26,7 +26,7 @@ def link_to_ET():
             desired_p = p 
             desired_link = desired_p.find('a')['href']
             break
-    r_l = requests.get(url_l, stream=True,allow_redirects=True,verify=False)
+    r_l = requests.get(desired_link, stream=True,allow_redirects=True,verify=False)
     soup_l = BeautifulSoup(r_l.content, 'html.parser')
     src_link = soup_l.find('iframe')['src'].split('?')[0]
     return src_link
@@ -62,7 +62,7 @@ def send_ET(src,token,id):
     print("ET has been sent.")
 
 
-# In[84]:
+# In[5]:
 
 
 if __name__  == "__main__":
