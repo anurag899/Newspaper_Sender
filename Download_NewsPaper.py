@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[67]:
+# In[82]:
 
 
 from bs4 import BeautifulSoup
@@ -11,7 +11,7 @@ warnings.filterwarnings("ignore")
 import datetime
 
 
-# In[80]:
+# In[83]:
 
 
 def link_to_ET():
@@ -62,7 +62,7 @@ def send_ET(src,token,id):
     print("ET has been sent.")
 
 
-# In[81]:
+# In[84]:
 
 
 if __name__  == "__main__":
